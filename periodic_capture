@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PATH=$PATH:/home/pi/Desktop/cam
+
+python capture.py >> capture.log 2>&1

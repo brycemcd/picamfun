@@ -1,0 +1,7 @@
+#!/bin/bash
+
+aws s3 sync \
+  --include="*.jpg" \
+  --acl public-read \
+  --storage-class STANDARD_IA \
+  /home/pi/Desktop/cam/data/ s3://bme-picam/data/ 
