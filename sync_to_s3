@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export PATH="/usr/local/bin:$PATH"
 aws s3 sync \
   --include="*.jpg" \
   --acl public-read \

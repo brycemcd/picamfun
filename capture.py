@@ -24,6 +24,6 @@ seed = string.ascii_lowercase + string.digits
 random_str = ''.join(random.choice(seed) for _ in range(6))
 filename_prefix = '/home/pi/Desktop/cam/data/img-%s' % random_str
 
-for filename in cam.capture_continuous(filename_prefix + "{timestamp:%Y-%m-%dT%H:%M:%S.%f%Z}-{counter:05d}.jpg"):
+for filename in cam.capture_continuous(filename_prefix + "-{timestamp:%Y-%m-%dT%H:%M:%S.%f%Z}-{counter:05d}.jpg"):
   print('Captured %s' % filename)
   sleep(10)
